@@ -202,9 +202,9 @@ section {
 }
 
 a {
-  text-decoration: none;  /* Removes underline */
-  color: inherit;         /* Uses the text color of the surrounding text */
-  font-weight: inherit;   /* Uses the same font weight as other text */
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
 }
 
 .highlight {
