@@ -97,3 +97,13 @@ function scrollToSection(id) {
     behavior: "smooth"
   });
 }
+
+const music = document.getElementById("background-music");
+
+function playMusic() {
+    music.play();
+}
+
+function pauseMusic() {
+    music.pause();
+}

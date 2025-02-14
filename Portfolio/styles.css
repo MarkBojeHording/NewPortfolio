@@ -100,3 +100,27 @@ section {
   display: flex;
   align-items: center;
 }
+
+.music-controls {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.music-controls button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.music-controls button:hover {
+  background: #ccc;
+}
