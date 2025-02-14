@@ -3,14 +3,13 @@ body {
   background-color: #090c44;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: auto; /* Allow scrolling */
-  height: auto; /* Remove fixed height */
+  overflow-y: auto;
+  height: auto;
   font-family: "Montserrat", serif;
   scroll-behavior: smooth;
-  display: block; /* Ensure normal document flow */
+  display: block;
 }
 
-/* Neural Network Container */
 .neural-network {
   position: absolute;
   width: 100%;
@@ -18,14 +17,13 @@ body {
   z-index: -1;
 }
 
-/* Fullscreen Canvas */
 #networkCanvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* Ensure canvas does not block interactions */
+  pointer-events: none;
 }
 
 .neural-text,
@@ -100,5 +98,5 @@ section {
   margin: 0;
   cursor: pointer;
   display: flex;
-  align-items: center; /* Aligns with buttons */
+  align-items: center;
 }
