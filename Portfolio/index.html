@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header class="header">
         <button onclick="scrollToSection('about')">About Me</button>
         <button onclick="scrollToSection('projects')">Projects</button>
@@ -20,36 +21,68 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24" height="24" fill="white">
               <path d="M40.5,4h-6.3L25,18.6L15.8,4H4l15.1,22.7L4,46h6.3L25,31.4L34.2,46H46L30.9,23.3L40.5,4z"/>
           </svg>
-      </a>
         </a>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
       <div class="music-controls">
-        <button onclick="playMusic()">▶ Play AI generated music from Udio</button>
+        <button onclick="prevSong()">⏮ Previous</button>
+        <button onclick="playMusic()">▶ Play</button>
         <button onclick="pauseMusic()">⏸ Pause</button>
+        <button onclick="nextSong()">⏭ Next</button>
     </div>
 
-    <audio id="background-music" autoplay loop>
-        <source src="assets/music/Digital Horizons.mp3" type="audio/mpeg">
+    <audio id="background-music">
+        <source id="audio-source" src="" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-        <div class="neural-network">
-            <canvas id="networkCanvas"></canvas>
-            <h1 class="neural-text">Hi, I'm Mark Hording.</h1>
-            <h2 class="main-text">I'm a web developer with a focus on AI.</h2>
-        </div>
+
+      <div class="neural-network">
+          <canvas id="networkCanvas"></canvas>
+          <h1 class="neural-text">Hi, I'm Mark Hording.</h1>
+          <h2 class="main-text">I'm a web developer with a focus on AI.</h2>
+      </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about">
-        <h1>About Me</h1>
-        <p>Passionate about AI and web development, I create intelligent and interactive web experiences.</p>
-    </section>
+      <div class="about-container">
+          <img src="images/Mark.jpeg" alt="About Me Image" class="about-image">
+          <div class="about-text">
+              <h1>About Me</h1>
+              <p>
+              <p>Worked in <span class="highlight">Education Management</span> in higher education in Denmark and China for over a decade. </p>
+                <p>Completed the <span class="highlight"><a href="https://www.lewagon.com/bali" target="_blank">Le Wagon</a></span> Web Development Bootcamp in 2023.</p>
+                Currently <span class="highlight">freelance working</span> and nomading across South East Asia.
+                <p>I'm passionate about AI and web development. Looking forward to working together, <span class="highlight"><a href="mailto:markhording@gmail.com" target="_blank">drop me a line.</a></span></p>
+              </p>
+          </div>
+      </div>
+  </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h1>Projects</h1>
         <p>Explore my latest AI-powered projects and web applications.</p>
     </section>
+
+    <!-- Footer with Neural Network -->
+    <footer class="footer">
+      <canvas id="footerCanvas"></canvas>
+      <div class="footer-content">
+        <p>
+          © 2025 Mark Hording |
+          <a href="mailto:markhording@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Gmail_Icon.svg" alt="Gmail" width="24" height="24">
+          </a>
+          |
+          <a href="https://www.linkedin.com/in/mark-hording-9120a523b/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+          </a>
+        </p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
 

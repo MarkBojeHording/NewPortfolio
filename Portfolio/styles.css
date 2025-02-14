@@ -124,3 +124,89 @@ section {
 .music-controls button:hover {
   background: #ccc;
 }
+
+/* Footer Section */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Adjust height if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #090c44; /* Ensure it matches the site's background */
+  overflow: hidden;
+  margin-top: 50px; /* Space between content and footer */
+}
+
+/* Neural Network Background for Footer */
+#footerCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* Prevents interaction issues */
+}
+
+/* Footer Content */
+.footer-content {
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  z-index: 1;
+  text-align: center;
+}
+
+.footer-content a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 50px auto;
+  flex-wrap: nowrap;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 30px;
+  padding: 20px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.about-text {
+  max-width: 600px;
+  color: white;
+  font-size: 1.4rem;
+  padding-left: 50px;
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;  /* Removes underline */
+  color: inherit;         /* Uses the text color of the surrounding text */
+  font-weight: inherit;   /* Uses the same font weight as other text */
+}
+
+.highlight {
+  color: #DDA0DD;
+}
