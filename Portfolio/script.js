@@ -200,53 +200,69 @@ function scrollToSection(id) {
 // ----------------- Background Music Controls -----------------
 // 🎵 Playlist Array (Add your MP3 files here)
 const playlist = [
-  "assets/music/Space Walk.mp3",
-  "assets/music/Digital Horizons.mp3",
-  "assets/music/Samurai Code.mp3",
+  { name: "Space Walk", url: "assets/music/Space Walk.mp3" },
+  { name: "Digital Horizons", url: "assets/music/Digital Horizons.mp3" },
+  { name: "Samurai Code", url: "assets/music/Samurai Code.mp3" }
 ];
 
 let currentSongIndex = 0;
-const music = document.getElementById("background-music");
+const audio = document.getElementById("background-music");
 const audioSource = document.getElementById("audio-source");
+const currentSongDisplay = document.getElementById("current-song");
+const playlistSelect = document.getElementById("playlist-select");
 
-// 🎶 Function to Load & Play a Song
-function loadSong(index) {
-  audioSource.src = playlist[index];
-  music.load();  // Reloads the new song
-  music.play();  // Auto-play the new track
+// Load playlist into dropdown
+function loadPlaylist() {
+  playlist.forEach((track, index) => {
+      let option = document.createElement("option");
+      option.value = index;
+      option.textContent = track.name;
+      playlistSelect.appendChild(option);
+  });
 }
 
-// ▶ Play Music
+// Play selected song
+function changeSong(index) {
+  currentSongIndex = index;
+  audioSource.src = playlist[currentSongIndex].url;
+  audio.load();
+  playMusic();
+}
+
+// Update song name and highlight selected track
+function updateSongInfo() {
+  currentSongDisplay.textContent = playlist[currentSongIndex].name;
+  playlistSelect.value = currentSongIndex;
+}
+
+// Play music
 function playMusic() {
-  if (music.paused) {
-      music.play();
-  }
+  audio.play();
+  updateSongInfo();
 }
 
-// ⏸ Pause Music
+// Pause music
 function pauseMusic() {
-  music.pause();
+  audio.pause();
 }
 
-// ⏭ Skip to Next Song
+// Next song
 function nextSong() {
-  currentSongIndex = (currentSongIndex + 1) % playlist.length; // Loop back to first song
-  loadSong(currentSongIndex);
+  currentSongIndex = (currentSongIndex + 1) % playlist.length;
+  changeSong(currentSongIndex);
 }
 
-// ⏮ Go to Previous Song
+// Previous song
 function prevSong() {
-  currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length; // Loop to last song if needed
-  loadSong(currentSongIndex);
+  currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+  changeSong(currentSongIndex);
 }
 
-// ⏩ Auto-Play Next Song When Current One Ends
-music.addEventListener("ended", nextSong);
-
-// 🚀 Load First Song on Page Load
-window.addEventListener("load", () => {
-  loadSong(currentSongIndex);
-});
+// Initialize
+window.onload = function () {
+  loadPlaylist();
+  changeSong(0);
+};
 
 const phoneMockup = document.querySelector(".phone-mockup");
 
