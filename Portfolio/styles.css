@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+  background-color: #090c44;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Allow scrolling */
+  height: auto; /* Remove fixed height */
+  font-family: "Montserrat", serif;
+  scroll-behavior: smooth;
+  display: block; /* Ensure normal document flow */
+}
+
+/* Neural Network Container */
+.neural-network {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Fullscreen Canvas */
+#networkCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Ensure canvas does not block interactions */
+}
+
+.neural-text,
+.main-text {
+  position: absolute;
+  color: #F8F9FA;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.neural-text {
+  font-size: 2.5rem;
+  left: 10%;
+  top: 40%;
+}
+
+.main-text {
+  font-size: 1.5rem;
+  left: 10%;
+  top: 48%;
+}
+
+.header {
+  position: fixed;
+  top: 40px;
+  right: 100px;
+  display: flex;
+  gap: 15px;
+  z-index: 3;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header button,
+.header a {
+  color: #F8F9FA;
+  font-size: 1em;
+  border: none;
+  background: transparent !important;
+  outline: none;
+  padding: 5px 10px;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.header button:hover,
+.header a:hover {
+  opacity: 0.8;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.github-link {
+  color: #F8F9FA;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Aligns with buttons */
+}

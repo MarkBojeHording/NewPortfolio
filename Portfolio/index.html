@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Neural Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <button onclick="scrollToSection('about')">About Me</button>
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <a href="https://github.com/MarkBojeHording" target="_blank" class="github-link">GitHub</a>
+        <a href="https://twitter.com/MarkHording" target="_blank" class="x-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24" height="24" fill="white">
+              <path d="M40.5,4h-6.3L25,18.6L15.8,4H4l15.1,22.7L4,46h6.3L25,31.4L34.2,46H46L30.9,23.3L40.5,4z"/>
+          </svg>
+      </a>
+        </a>
+    </header>
+
+    <!-- Top Section (With Neural Network) -->
+    <section id="hero">
+        <div class="neural-network">
+            <canvas id="networkCanvas"></canvas>
+            <h1 class="neural-text">Hi, I'm Mark Hording.</h1>
+            <h2 class="main-text">I'm a web developer with a focus on AI.</h2>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Passionate about AI and web development, I create intelligent and interactive web experiences.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Explore my latest AI-powered projects and web applications.</p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
