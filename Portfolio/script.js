@@ -247,3 +247,22 @@ music.addEventListener("ended", nextSong);
 window.addEventListener("load", () => {
   loadSong(currentSongIndex);
 });
+
+const phoneMockup = document.querySelector(".phone-mockup");
+
+document.addEventListener("mousemove", (event) => {
+    const rect = phoneMockup.getBoundingClientRect();
+    const isNear =
+        event.clientX > rect.left - 100 &&
+        event.clientX < rect.right + 100 &&
+        event.clientY > rect.top - 100 &&
+        event.clientY < rect.bottom + 100;
+
+    if (isNear) {
+        let x = (window.innerWidth / 2 - event.pageX) / 50;
+        let y = (window.innerHeight / 2 - event.pageY) / 50;
+        phoneMockup.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    } else {
+        phoneMockup.style.transform = "rotateY(0deg) rotateX(0deg)";
+    }
+});
