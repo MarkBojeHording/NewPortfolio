@@ -135,7 +135,7 @@ section {
   justify-content: center;
   background-color: #090c44; /* Ensure it matches the site's background */
   overflow: hidden;
-  margin-top: 50px; /* Space between content and footer */
+  margin-top: -150px;
 }
 
 /* Neural Network Background for Footer */
@@ -156,6 +156,7 @@ section {
   font-size: 1rem;
   z-index: 1;
   text-align: center;
+  margin-top: 10em;
 }
 
 .footer-content a {
@@ -361,8 +362,47 @@ a {
   padding-left: 20px;
 }
 
+/* Social Icons - Centered Above Footer */
+.social-icons {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  top: -30px;
+  position: relative;
+  z-index: 2;
+  margin-top: 200px;
+}
+
+/* Individual Icon Styling */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Make sure the images are visible */
+.social-icons img {
+  width: 2.7em;
+  height: 2.7em;
+}
+
+/* Add hover effects */
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
 /* Music Controls - Vertical & Left-Aligned */
-.music-controls {
+/* .music-controls {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -371,10 +411,10 @@ a {
   padding: 15px;
   border-radius: 10px;
   width: fit-content;
-}
+} */
 
 /* Style for Music Buttons */
-.music-controls button {
+/* .music-controls button {
   background: #fff;
   color: #000;
   border: none;
@@ -388,10 +428,10 @@ a {
 
 .music-controls button:hover {
   background: #ccc;
-}
+} */
 
 /* Music Info - Left Aligned */
-.music-info {
+/* .music-info {
   margin-top: 10px;
   color: white;
   font-size: 16px;
@@ -399,10 +439,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} */
 
 /* Song Selector */
-#playlist-select {
+/* #playlist-select {
   background: #fff;
   color: #000;
   border: none;
@@ -417,7 +457,7 @@ a {
 
 #playlist-select:hover {
   background: #ddd;
-}
+} */
 
 /* Ensure the text is properly aligned */
 #hero p {
